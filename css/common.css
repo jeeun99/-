@@ -213,7 +213,7 @@ button {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-top: 100px;
+    padding-top: 75px;
   }
   .drink img {
     border-radius: 16px;
@@ -317,14 +317,14 @@ button {
     display: flex;
     position: absolute;
     right: 3%;
-    bottom: 10%;
+    bottom: 15%;
   }
   .insta,
   .youtube,
   .kakaotalk,
   .facebook,
   .naver {
-    width: 55px;
+    width: 50px;
     padding: 5px;
   }
 }
@@ -531,18 +531,19 @@ button {
     display: flex;
     flex-direction: column;
     padding: 16px;
+    margin-left: 16px;
     font-size: 8px;
     font-weight: 500;
   }
   .foot > li > img {
-    width: 30%;
+    width: 100px;
     margin-bottom: 8px;
   }
   .foot li p {
     line-height: 1.7;
   }
   .foot li:nth-of-type(2) {
-    color: white;
+    color: var(--color_footerwhite);
   }
   .foot li:nth-of-type(2) p {
     padding-right: 2px;
