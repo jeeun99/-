@@ -382,7 +382,7 @@ button {
   .sec1 {
     width: 100%;
     height: 600px;
-    background: left / cover url("/img/main_banner_mobile.png") no-repeat;
+    background: left / cover url("../img/main_banner_mobile.png") no-repeat;
   }
   .sec1 img {
     width: 140px;
