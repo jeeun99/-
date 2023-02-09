@@ -39,6 +39,26 @@ button {
   width: 135px;
 }
 
+.btn {
+  position: absolute;
+  background-color: var(--point_blue);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--point_yellow);
+}
+.btn:hover::after {
+  content: " \f061";
+  font-family: "Font Awesome 5 Free";
+}
+
 .subtitle {
   font-size: 36px;
   color: var(--point_blue);
@@ -177,25 +197,7 @@ button {
     font-size: 20px;
     padding: 7px;
   }
-  .btn {
-    position: absolute;
-    background-color: var(--point_blue);
-    color: white;
-    padding: 16px 40px;
-    border-radius: 20px;
-    border: none;
-    font-size: 24px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .btn:hover {
-    background-color: var(--point_yellow);
-  }
-  .btn:hover::after {
-    content: " \f061";
-    font-family: "Font Awesome 5 Free";
-  }
+
   .btn_sub {
     right: 0;
     bottom: 0;
@@ -238,7 +240,6 @@ button {
   }
 
   .drink_yak {
-    background-image: url(./img/약주.png);
     width: 269px;
     height: 226px;
   }
@@ -262,15 +263,19 @@ button {
   .footer_wrap {
     width: 100%;
     margin-top: 100px;
+    position: relative;
     background-color: #a0a0a0;
   }
   .foot {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 32px;
     font-size: 14px;
     font-weight: 500;
+  }
+  .foot > li {
+    margin-right: 48px;
   }
   .foot li:nth-of-type(2) {
     color: white;
@@ -308,6 +313,20 @@ button {
     display: inline-block;
     padding-right: 16px;
   }
+  .sns {
+    display: flex;
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+  }
+  .insta,
+  .youtube,
+  .kakaotalk,
+  .facebook,
+  .naver {
+    width: 55px;
+    padding: 5px;
+  }
 }
 @media (max-width: 960px) {
   .mw {
@@ -341,7 +360,7 @@ button {
   .gnb.on {
     display: flex;
     position: absolute;
-    top: 69px;
+    top: 6px;
     right: 0;
     width: 100%;
     background-color: #fff;
@@ -349,6 +368,7 @@ button {
     align-items: center;
     font-size: 24px;
     padding: 16px 0;
+    z-index: 10;
   }
   .gnb.on a {
     padding: 8px 16px;
@@ -358,6 +378,7 @@ button {
   .posi {
     position: relative;
   }
+  /* sec1 */
   .sec1 {
     width: 100%;
     height: 600px;
@@ -396,7 +417,6 @@ button {
   }
 
   /* sec2 */
-
   .subtitle {
     font-size: 36px;
     font-weight: 600;
@@ -408,6 +428,7 @@ button {
   }
   .subtext img {
     width: 305px;
+    border-radius: 16px;
   }
   .btn_m {
     position: absolute;
@@ -433,5 +454,138 @@ button {
   }
   .sec2 p:nth-of-type(2) ~ p {
     padding: 7px;
+  }
+  /* sec3 */
+  .sec3 p {
+    font-size: 24px;
+    color: var(--color_idxtext);
+  }
+  .drink {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+  }
+  .wrap_yak,
+  .wrap_fruit,
+  .wrap_so,
+  .wrap_mak {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border-radius: 16px;
+  }
+  .text_yak,
+  .text_fruit,
+  .text_so,
+  .text_mak {
+    position: absolute;
+    top: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 10px 16px;
+    color: var(--point_white);
+    text-shadow: 0 0 10px black;
+    transform: translateY(-50%);
+  }
+  .text_yak,
+  .text_so {
+    left: 0;
+  }
+  .text_fruit,
+  .text_mak {
+    right: 0;
+  }
+
+  .drink_yak {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .drink_fruit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .drink_so {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .drink_mak {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* footer */
+  .footer_wrap {
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    background-color: #a0a0a0;
+  }
+  .foot {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    font-size: 8px;
+    font-weight: 500;
+  }
+  .foot > li > img {
+    width: 30%;
+    margin-bottom: 8px;
+  }
+  .foot li p {
+    line-height: 1.7;
+  }
+  .foot li:nth-of-type(2) {
+    color: white;
+  }
+  .foot li:nth-of-type(2) p {
+    padding-right: 2px;
+  }
+  .foot li:nth-of-type(2) p:nth-of-type(3),
+  .foot li:nth-of-type(2) p:nth-of-type(4),
+  .foot li:nth-of-type(2) p:nth-of-type(5) {
+    font-size: 8px;
+    display: inline;
+  }
+
+  .foot li:nth-of-type(3) p {
+    font-size: 8px;
+  }
+  .foot li:nth-of-type(3) p:nth-of-type(1),
+  .foot li:nth-of-type(3) p:nth-of-type(2) {
+    color: var(--color_footerwhite80);
+  }
+  .foot li:nth-of-type(3) p:nth-of-type(3),
+  .foot li:nth-of-type(3) p:nth-of-type(4),
+  .foot li:nth-of-type(3) p:nth-of-type(5) {
+    color: var(--color_footerwhite60);
+    font-size: 6px;
+  }
+  .foot li:nth-of-type(3) p:nth-of-type(5) {
+    text-decoration: underline;
+  }
+  .foot span {
+    display: inline-block;
+    padding-right: 16px;
+  }
+  .sns {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+  }
+  .insta,
+  .youtube,
+  .kakaotalk,
+  .facebook,
+  .naver {
+    width: 30px;
+    padding: 3px;
   }
 }
