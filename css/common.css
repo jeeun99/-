@@ -215,16 +215,32 @@ button {
     align-items: flex-end;
     padding-top: 75px;
   }
-  .drink img {
+  .drink > div {
+    width: 20%;
+    /* padding-top: 20%; */
     border-radius: 16px;
+    overflow: hidden;
+    position: relative;
     margin-left: 16px;
   }
-  .wrap_yak,
-  .wrap_fruit,
-  .wrap_so,
-  .wrap_mak {
-    position: relative;
+  .drink img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
+  .wrap_yak {
+    padding-top: 18%;
+  }
+  .wrap_fruit {
+    padding-top: 25%;
+  }
+  .wrap_so {
+    padding-top: 20%;
+  }
+  .wrap_mak {
+    padding-top: 24%;
+  }
+
   .text_yak,
   .text_fruit,
   .text_so,
@@ -237,24 +253,6 @@ button {
     padding: 10px 16px;
     color: var(--point_white);
     text-shadow: 0 0 10px black;
-  }
-
-  .drink_yak {
-    width: 269px;
-    height: 226px;
-  }
-
-  .drink_fruit {
-    width: 273px;
-    height: 340px;
-  }
-  .drink_so {
-    width: 258px;
-    height: 246px;
-  }
-  .drink_mak {
-    width: 258px;
-    height: 320 px;
   }
 
   /* sec4 */
