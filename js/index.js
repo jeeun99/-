@@ -17,3 +17,11 @@ var swiper = new Swiper(".slide1", {
   centeredSlides: true,
   loop: true,
 });
+
+const $ham = document.querySelector(".ham");
+const $gnb = document.querySelector(".gnb");
+
+$ham.addEventListener("click", function () {
+  this.classList.toggle("on");
+  $gnb.classList.toggle("on");
+});
