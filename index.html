@@ -13,7 +13,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/common.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="hd">
@@ -106,63 +113,243 @@
         </div>
       </div>
     </section>
-    <!-- <section class="sec4 mw posi">
-      <div class="subtitle">담화후기</div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
+    <section class="sec4 posi">
+      <div class="subtitle mw">담화후기</div>
+      <div class="swiper-container slide1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/허니비.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/한주.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/탁여현.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/유자주.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/얼떨결에퍼플.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/약청주.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/소주들.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/서울의밤.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/매실원주.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/막쿠르트.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/dok막걸리.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review_box">
+              <div class="review_img">
+                <img src="./img/담은.png" alt="후기이미지  " />
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review_text">
+                이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도
+                이런 혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
+              </span>
+              <span class="user_id">idfortest**</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev prev1"></div>
+        <div class="swiper-button-next next1"></div>
       </div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
-      </div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
-      </div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
-      </div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
-      </div>
-      <div class="review_box">
-        <img src="./img/Rectangle 9.png" alt="후기이미지  " />
-        <i>star</i>
-        <p>
-          이렇게나 좋은 상품을 이렇게나 저렴하게 살 수 있다니 진짜 혜자도 이런
-          혜자가 없네요. 덕분에 즐겁고 행복하게 마시고 있습니다!
-        </p>
-        <p>idfortest**</p>
-      </div>
-    </section> -->
+    </section>
     <footer class="footer_wrap posi">
       <ul class="foot">
         <li><img src="./img/logo.png" alt="logo" /></li>
