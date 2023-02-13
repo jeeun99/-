@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/my_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/subpage.css" />
   </head>
   <body>
     <header class="hd">
@@ -32,13 +40,44 @@
         </div>
       </nav>
     </header>
-    <section class="sec1 posi">
-      <div class="mw">
-        <img src="./img/iconlogo.png" alt="아이콘로고" />
-        <p>세상의 술자리를</p>
-        <p>다채롭게</p>
-        <p>국내 최초, 국내 최대! No.1 전통주 구독 서비스</p>
-        <p>세세한 품질관리와 깐깐하게 담은 인생술, ONLY 담화에서 만나보세요!</p>
+    <section class="posi mw">
+      <div class="product">
+        <div class="thumbnail_con">
+          <img src="./img/thumbnailimg1.png " alt="1" />
+          <ul class="thumbnail">
+            <li>
+              <img src="./img/thumbnailimg1.png " alt="1" />
+            </li>
+            <li>
+              <img src="./img/thumbnailimg2.png" alt="2" />
+            </li>
+          </ul>
+        </div>
+        <div class="product_con">
+          <p>
+            <span style="font-weight: bold">[이달의 담화]</span> 담화박스를
+            구독하세요!
+          </p>
+          <select name="boxes" id="box-select" class="selection">
+            <option value="">옵션을 선택하세요</option>
+            <option value="damhwa">2월의 담화 박스</option>
+            <option value="alchol_damhwa">2월의 증류주 담화 박스</option>
+          </select>
+          <div class="select_product">
+            <p>2월의 담화 박스</p>
+            <div>
+              <p>수량</p>
+              <button class="minus"><i class="fa-solid fa-minus"></i></button>
+              <input type="num" />
+              <button class="plus"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+          <p>합계 49,000원</p>
+          <div class="btn_prod">
+            <button class="cart">장바구니</button>
+            <button class="purchase">바로구매</button>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer_wrap posi">
