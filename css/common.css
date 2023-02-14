@@ -27,6 +27,11 @@ body {
 body {
   background-color: var(--backgroundcolor);
 }
+.mw {
+  max-width: 1440px;
+  width: calc(100% - 4rem);
+  margin: auto;
+}
 button {
   background-color: transparent;
   border: none;
@@ -70,6 +75,26 @@ button {
   /* padding-bottom: 3rem; */
   margin-bottom: 2rem;
 }
+
+.wrap_yak,
+.wrap_fruit,
+.wrap_so,
+.wrap_mak {
+  position: relative;
+}
+.wrap_yak a,
+.wrap_fruit a,
+.wrap_so a,
+.wrap_mak a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  text-indent: -90px;
+}
+
 .review_box {
   background-color: white;
   display: flex;
@@ -101,6 +126,11 @@ button {
 .swiper-slide.swiper-slide-active {
   transform: scale(1);
   opacity: 1;
+  transition: 0.3s;
+}
+.swiper-slide.swiper-slide-active:hover .review_box {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .swiper-slide.swiper-slide-prev,
 .swiper-slide.swiper-slide-next {
@@ -126,7 +156,7 @@ button {
 
 .slide1 .prev1,
 .slide1 .next1 {
-  top: 280px;
+  top: 50%;
 }
 .slide1 .prev1::after {
   content: "\f104";
@@ -144,12 +174,12 @@ button {
 }
 
 .slide1 .prev1 {
-  left: 40%;
+  left: 39.7%;
   right: auto;
   transform: translateX(-90%);
 }
 .slide1 .next1 {
-  right: 40%;
+  right: 39.7%;
   left: auto;
   transform: translateX(90%);
 }
@@ -162,17 +192,12 @@ button {
 }
 
 @media (min-width: 961px) {
-  .mw {
-    max-width: 1440px;
-    width: 100%;
-    min-width: 851px;
-    margin: auto;
-  }
   .hd {
     font-size: 28px;
     background-color: white;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: 9000;
   }
   .hd a {
@@ -222,17 +247,13 @@ button {
     display: none;
   }
 
-  /* section 영역 */
-  .posi {
-    position: relative;
-    top: 150px;
-  }
   /* main_banner_sec */
   .main_banner_sec {
     width: 100%;
-    /* padding-top: 40%; */
+    margin-top: 150px;
     height: 640px;
     background: center / cover url("../img/main_banner.png") no-repeat;
+    position: relative;
   }
   .main_banner_sec img {
     position: absolute;
@@ -271,24 +292,24 @@ button {
   /* subscribe_sec */
   .subscribe_sec {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .subscribe_sec img {
     padding-right: 33px;
   }
-  .subtext {
-    display: flex;
-  }
-  .subscribe_sec p:nth-of-type(1) {
+
+  .subscribe_sec h3 {
     font-size: 2rem;
     color: var(--color_idxtext);
   }
-  .subscribe_sec p:nth-of-type(2) {
+  .subscribe_sec p:nth-of-type(1) {
     font-size: 20px;
     color: var(--color_maintext);
     margin-bottom: 36px;
   }
-  .subscribe_sec p:nth-of-type(2) ~ p {
+  .subscribe_sec p:nth-of-type(1) ~ p {
     font-size: 20px;
     padding: 7px;
   }
@@ -298,6 +319,9 @@ button {
     bottom: 0;
   }
   /* market_sec */
+  .market_sec {
+    position: relative;
+  }
   .market_sec p {
     font-size: 2rem;
   }
@@ -310,17 +334,22 @@ button {
     align-items: flex-end;
     padding-top: 75px;
   }
-  .drink > div {
+  .drink > li {
     width: 20%;
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
     margin-left: 1rem;
   }
+  .drink > li:hover img {
+    transform: scale(1.2);
+  }
   .drink img {
     width: 100%;
+    object-fit: cover;
     position: absolute;
     bottom: 0;
+    transition: 0.3s;
   }
   .wrap_yak {
     padding-top: 18%;
@@ -360,45 +389,57 @@ button {
   }
   .foot {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 2rem;
     font-size: 14px;
     font-weight: 500;
+    width: 100%;
   }
-  .foot > li {
+  .foot > div {
     margin-right: 3rem;
   }
-  .foot li:nth-of-type(2) {
-    color: white;
+  .foot div:nth-of-type(1) {
+    width: 10%;
+    display: flex;
+    justify-content: center;
   }
-  .foot li:nth-of-type(2) p {
+  .foot div:nth-of-type(2) {
+    color: white;
+    width: 18%;
+  }
+  .foot div:nth-of-type(3) {
+    width: 72%;
+  }
+  .foot div:nth-of-type(1) > img {
+    width: 90%;
+  }
+  .foot div:nth-of-type(2) p {
     padding: 2px;
   }
-  .foot li:nth-of-type(2) p:nth-of-type(3) {
+  .foot div:nth-of-type(2) p:nth-of-type(3) {
     font-size: 20px;
   }
-  .foot li:nth-of-type(2) p:nth-of-type(4) {
+  .foot div:nth-of-type(2) p:nth-of-type(4) {
     font-size: 20px;
   }
-  .foot li:nth-of-type(2) p:nth-of-type(5) {
+  .foot div:nth-of-type(2) p:nth-of-type(5) {
     font-size: 20px;
   }
 
-  .foot li:nth-of-type(3) p {
+  .foot div:nth-of-type(3) p {
     font-size: 14px;
     padding-bottom: 0.5rem;
   }
-  .foot li:nth-of-type(3) p:nth-of-type(1),
-  .foot li:nth-of-type(3) p:nth-of-type(2) {
+  .foot div:nth-of-type(3) p:nth-of-type(1),
+  .foot div:nth-of-type(3) p:nth-of-type(2) {
     color: var(--color_footerwhite80);
   }
-  .foot li:nth-of-type(3) p:nth-of-type(3),
-  .foot li:nth-of-type(3) p:nth-of-type(4),
-  .foot li:nth-of-type(3) p:nth-of-type(5) {
+  .foot div:nth-of-type(3) p:nth-of-type(3),
+  .foot div:nth-of-type(3) p:nth-of-type(4),
+  .foot div:nth-of-type(3) p:nth-of-type(5) {
     color: var(--color_footerwhite60);
   }
-  .foot li:nth-of-type(3) p:nth-of-type(5) {
+  .foot div:nth-of-type(3) p:nth-of-type(5) {
     text-decoration: underline;
   }
   .foot span {
@@ -408,16 +449,16 @@ button {
   .sns {
     display: flex;
     position: absolute;
-    right: 3%;
-    bottom: 15%;
+    right: 0;
+    bottom: 5%;
   }
   .insta,
   .youtube,
   .kakaotalk,
   .facebook,
   .naver {
-    width: 50px;
-    padding: 5px;
+    width: 40px;
+    padding: 3px;
   }
 }
 @media (max-width: 960px) {
@@ -591,22 +632,9 @@ button {
     right: 0;
   }
 
-  .drink_yak {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .drink_fruit {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .drink_so {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  .drink_yak,
+  .drink_fruit,
+  .drink_so,
   .drink_mak {
     width: 100%;
     height: 100%;
@@ -637,40 +665,40 @@ button {
     font-size: 0.5rem;
     font-weight: 500;
   }
-  .foot > li > img {
+  .foot > div:nth-of-type(1) > img {
     width: 100px;
     margin-bottom: 0.5rem;
   }
-  .foot li p {
+  .foot div p {
     line-height: 1.7;
   }
-  .foot li:nth-of-type(2) {
+  .foot div:nth-of-type(2) {
     color: var(--color_footerwhite);
   }
-  .foot li:nth-of-type(2) p {
+  .foot div:nth-of-type(2) p {
     padding-right: 2px;
   }
-  .foot li:nth-of-type(2) p:nth-of-type(3),
-  .foot li:nth-of-type(2) p:nth-of-type(4),
-  .foot li:nth-of-type(2) p:nth-of-type(5) {
+  .foot div:nth-of-type(2) p:nth-of-type(3),
+  .foot div:nth-of-type(2) p:nth-of-type(4),
+  .foot div:nth-of-type(2) p:nth-of-type(5) {
     font-size: 0.5rem;
     display: inline;
   }
 
-  .foot li:nth-of-type(3) p {
+  .foot div:nth-of-type(3) p {
     font-size: 0.5rem;
   }
-  .foot li:nth-of-type(3) p:nth-of-type(1),
-  .foot li:nth-of-type(3) p:nth-of-type(2) {
+  .foot div:nth-of-type(3) p:nth-of-type(1),
+  .foot div:nth-of-type(3) p:nth-of-type(2) {
     color: var(--color_footerwhite80);
   }
-  .foot li:nth-of-type(3) p:nth-of-type(3),
-  .foot li:nth-of-type(3) p:nth-of-type(4),
-  .foot li:nth-of-type(3) p:nth-of-type(5) {
+  .foot div:nth-of-type(3) p:nth-of-type(3),
+  .foot div:nth-of-type(3) p:nth-of-type(4),
+  .foot div:nth-of-type(3) p:nth-of-type(5) {
     color: var(--color_footerwhite60);
     font-size: 6px;
   }
-  .foot li:nth-of-type(3) p:nth-of-type(5) {
+  .foot div:nth-of-type(3) p:nth-of-type(5) {
     text-decoration: underline;
   }
   .foot span {
@@ -688,7 +716,7 @@ button {
   .kakaotalk,
   .facebook,
   .naver {
-    width: 30px;
+    width: 40px;
     padding: 3px;
   }
 }
