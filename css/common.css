@@ -58,6 +58,9 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
+.btn > * {
+  color: white;
+}
 .btn:hover {
   background-color: var(--point_yellow);
 }

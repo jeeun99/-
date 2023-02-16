@@ -1,10 +1,10 @@
 var swiper = new Swiper(".slide1", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".next1",
+    prevEl: ".prev1",
   },
   autoplay: {
-    delay: 2500,
+    delay: 3000,
     disableOnInteraction: false,
   },
 
