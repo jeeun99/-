@@ -131,10 +131,7 @@ button {
   opacity: 1;
   transition: 0.3s;
 }
-.swiper-slide.swiper-slide-active:hover .review_box {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
 .swiper-slide.swiper-slide-prev,
 .swiper-slide.swiper-slide-next {
   opacity: 0.8;
@@ -382,7 +379,10 @@ button {
   }
 
   /* review_sec */
-
+  .swiper-slide.swiper-slide-active:hover .review_box {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
   /* footer */
   .footer_wrap {
     width: 100%;
