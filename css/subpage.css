@@ -335,6 +335,154 @@
   background-color: var(--point_blue);
 }
 
+input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color_black20);
+}
+.buyPage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #00000080;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.buyPage.on {
+  display: flex;
+}
+.modal {
+  position: relative;
+}
+.btn_close {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.modal {
+  background-color: var(--backgroundcolor);
+  width: 1000px;
+  height: 911px;
+  font-size: 20px;
+}
+.modal > * {
+  display: block;
+  padding-left: 1rem;
+}
+.modal h2 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.modal > div {
+  padding-bottom: 1rem;
+}
+.modal label {
+  font-size: 24px;
+  padding-right: 0.5rem;
+}
+.box_name label,
+.user_name label,
+.add_num label,
+.user_phone label,
+.deliver_memo label {
+  display: inline-block;
+  width: 110px;
+
+  text-align: right;
+}
+
+.modal input,
+.modal select {
+  font-size: 20px;
+}
+.modal select {
+  width: 40%;
+  border: 1px solid var(--color_black20);
+  background-color: transparent;
+}
+.add_num input:nth-of-type(2) {
+  width: 50%;
+  padding-top: 1rem;
+  margin-left: 6.7rem;
+}
+.user_phone input {
+  width: 40%;
+}
+.totalPrice {
+  padding-top: 50px;
+}
+.total_price {
+  display: inline-block;
+  padding-left: 17rem;
+}
+.pay_things {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 100px;
+}
+.pay_things p {
+  width: 100%;
+  font-size: 24px;
+  padding-bottom: 1rem;
+}
+.paybox {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  border: 1px solid black;
+}
+.btn_buying {
+  position: absolute;
+  right: 4rem;
+  bottom: 1.5rem;
+}
+.paybox label {
+  font-size: 20px;
+}
+.paybox > div {
+  padding: 0.5rem 0;
+  width: calc(100% / 3);
+}
+.btn_add:hover,
+.btn_buying:hover,
+.btn_close:hover {
+  cursor: pointer;
+}
+.btn_add {
+  font-size: 1rem;
+  color: var(--color_maintext);
+  border: 1px solid #00000030;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.btn_buying,
+.btn_close {
+  position: absolute;
+  background-color: var(--point_blue);
+  color: white;
+  padding: 1rem 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn_buying:hover,
+.btn_close:hover {
+  background-color: var(--point_yellow);
+}
+
 @media (max-width: 960px) {
   .product {
     display: flex;
@@ -379,6 +527,20 @@
   }
   .cal > * {
     font-size: 12px;
+  }
+  .slide2,
+  .slide3 {
+    border: 1px solid var(--color_black20);
+  }
+  .hint {
+    padding: 1rem;
+  }
+  .hint_discription {
+    margin: 0 4rem;
+  }
+  .hint_discription p:nth-of-type(3),
+  .hint_discription p:nth-of-type(4) {
+    width: calc(100% / 2);
   }
 }
 @media (min-width: 961px) {

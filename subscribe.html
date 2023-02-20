@@ -501,6 +501,92 @@
         </div>
       </div>
     </section>
+    <div class="buyPage on">
+      <div class="modal_con">
+        <div class="modal">
+          <h2>구매 확인</h2>
+          <button class="btn_close">닫기</button>
+          <div class="box_name">
+            <label for="box_name">상품명</label>
+            <span>2월의 담화 박스</span>
+          </div>
+          <div class="user_name">
+            <label for="user_name">받는분</label>
+            <input
+              type="text"
+              id="user_name"
+              maxlength="20"
+              placeholder="이름을 입력하세요."
+            />
+          </div>
+          <div class="add_num">
+            <label for="add_num">우편번호</label>
+            <input type="text" class="add_num" maxlength="20" placeholder="" />
+            <button class="btn_add">우편번호찾기</button>
+            <input
+              style="display: block"
+              type="text"
+              id="add_num"
+              maxlength="40"
+              placeholder="상세주소를 입력하세요"
+            />
+          </div>
+          <div class="user_phone">
+            <label for="user_phone">휴대폰</label>
+            <input
+              type="text"
+              id="user_phone"
+              maxlength="20"
+              placeholder="'-'를 제외한 숫자만 입력하세요."
+            />
+          </div>
+          <div class="deliver_memo">
+            <label for="deliver_memo">배송메모</label>
+            <select name="memos" id="deliver_memo" class="deliver_memo">
+              <option value="">배송시 요청사항을 선택하세요</option>
+              <option value="door">현관 앞</option>
+              <option value="door">경비실</option>
+              <option value="door">무인우편물보관함</option>
+            </select>
+          </div>
+          <div class="totalPrice">
+            <label for="total_price">총 주문 금액</label>
+            <span class="total_price">49,000원</span>
+          </div>
+          <div class="pay_things">
+            <p>결제수단</p>
+            <div class="paybox">
+              <div class="pay_card">
+                <input type="radio" name="pay" id="pay_card" value="card" />
+                <label for="pay_card">신용카드/체크카드</label>
+              </div>
+              <div class="pay_kakao">
+                <input type="radio" name="pay" id="pay_kakao" value="kakao" />
+                <label for="pay_kakao">카카오페이</label>
+              </div>
+              <div class="pay_culture">
+                <input
+                  type="radio"
+                  name="pay"
+                  id="pay_culture"
+                  value="culture"
+                />
+                <label for="pay_culture">문화상품권</label>
+              </div>
+              <div class="pay_bank">
+                <input type="radio" name="pay" id="pay_bank" value="bank" />
+                <label for="pay_bank">무통장입금</label>
+              </div>
+              <div class="pay_naver">
+                <input type="radio" name="pay" id="pay_naver" value="naver" />
+                <label for="pay_naver">네이버페이</label>
+              </div>
+            </div>
+            <button class="btn_buying">결제 진행하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer_wrap">
       <div class="foot">
         <div><img src="./img/logo_footer.png" alt="logo" /></div>

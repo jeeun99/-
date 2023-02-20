@@ -25,37 +25,36 @@ var swiper = new Swiper(".slide1", {
 const $ham = document.querySelector(".ham");
 const $gnb = document.querySelector(".gnb");
 
-$ham.addEventListener("click", function () {
-  this.classList.toggle("on");
+$ham.addEventListener("click", () => {
+  $ham.classList.toggle("on");
   $gnb.classList.toggle("on");
 });
 
+// const $hd = document.querySelector(".hd>nav");
+// const $foot = document.querySelector(".foot");
 // const HD = `
-// <nav class="top_nav mw">
 // <h1 class="logo">
-//   <a href="./index.html"
-//     ><img src="./img/sooldamhwa_logo.png" alt="술담화로고"
-//   /></a>
-// </h1>
-// <div class="gnb">
-//   <a href="./index.html">담화소개</a>
-//   <a href="./subscribe.html">담화구독</a>
-//   <a href="#">담화마켓</a>
-// </div>
-// <div class="func">
-//   <button href="#" class="btn_login">로그인</button>
-//   <button href="#" class="btn_mypg">마이페이지</button>
-//   <button href="#" class="btn_search">검색</button>
-// </div>
-// <div class="ham">
-//   <i class="fa-solid fa-bars"></i>
-//   <i class="fa-solid fa-xmark"></i>
-// </div>
-// </nav>
+//           <a href="./index.html"
+//             ><img src="./img/sooldamhwa_logo.png" alt="술담화로고"
+//           /></a>
+//         </h1>
+//         <div class="gnb">
+//           <a href="./index.html">담화소개</a>
+//           <a href="./subscribe.html">담화구독</a>
+//           <a href="#">담화마켓</a>
+//         </div>
+//         <div class="func">
+//           <button href="#" class="btn_login">로그인</button>
+//           <button href="#" class="btn_mypg">마이페이지</button>
+//           <button href="#" class="btn_search">검색</button>
+//         </div>
+//         <div class="ham">
+//           <i class="fa-solid fa-bars"></i>
+//           <i class="fa-solid fa-xmark"></i>
+//         </div>
 // `;
 // const FT = `
-// <div class="foot">
-//         <div><img src="./img/logo_footer.png" alt="logo" /></div>
+// <div><img src="./img/logo_footer.png" alt="logo" /></div>
 //         <div>
 //           <p>고객센터:<span>070-5014-1282</span></p>
 //           <p>평일 10:00 - 18:00,<span> 주말 휴무</span></p>
@@ -95,10 +94,6 @@ $ham.addEventListener("click", function () {
 //           <img src="./img/facebook.png" alt="facebook" class="facebook" />
 //           <img src="./img/naver.png" alt="naver" class="naver" />
 //         </div>
-//       </div>
 // `;
-// const $hd = document.querySelector(".hd");
-// const $footer_wrap = document.querySelector(".footer_wrap");
-
 // $hd.innerHTML = HD;
-// $footer_wrap.innerHTML = FT;
+// $foot.innerHTML = FT;
