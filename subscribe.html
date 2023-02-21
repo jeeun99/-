@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/subpage.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/index.js" defer></script>
     <script src="./js/subpage.js" defer></script>
   </head>
   <body>
@@ -288,7 +289,6 @@
                 </div>
               </li>
             </ul>
-            <div class="swiper-pagination pg2"></div>
           </div>
         </div>
         <div class="jbox">
@@ -501,7 +501,7 @@
         </div>
       </div>
     </section>
-    <div class="buyPage on">
+    <div class="buyPage">
       <div class="modal_con">
         <div class="modal">
           <h2>구매 확인</h2>
@@ -556,13 +556,13 @@
           <div class="pay_things">
             <p>결제수단</p>
             <div class="paybox">
-              <div class="pay_card">
-                <input type="radio" name="pay" id="pay_card" value="card" />
-                <label for="pay_card">신용카드/체크카드</label>
-              </div>
               <div class="pay_kakao">
                 <input type="radio" name="pay" id="pay_kakao" value="kakao" />
                 <label for="pay_kakao">카카오페이</label>
+              </div>
+              <div class="pay_naver">
+                <input type="radio" name="pay" id="pay_naver" value="naver" />
+                <label for="pay_naver">네이버페이</label>
               </div>
               <div class="pay_culture">
                 <input
@@ -577,9 +577,9 @@
                 <input type="radio" name="pay" id="pay_bank" value="bank" />
                 <label for="pay_bank">무통장입금</label>
               </div>
-              <div class="pay_naver">
-                <input type="radio" name="pay" id="pay_naver" value="naver" />
-                <label for="pay_naver">네이버페이</label>
+              <div class="pay_card">
+                <input type="radio" name="pay" id="pay_card" value="card" />
+                <label for="pay_card">신용카드/체크카드</label>
               </div>
             </div>
             <button class="btn_buying">결제 진행하기</button>

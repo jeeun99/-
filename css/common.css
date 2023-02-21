@@ -508,8 +508,11 @@ button {
     z-index: 10;
   }
   .gnb.on a {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     color: var(--color_maintext);
+  }
+  .gnb.on a:hover {
+    color: var(--point_blue);
   }
   /* section */
   .posi {
