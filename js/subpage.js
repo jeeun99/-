@@ -1,7 +1,15 @@
 var swiper = new Swiper(".slide2 , .slide3", {
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
+  breakpoints: {
+    450: {
+      slidesPerView: 1,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+    },
+    961: {
+      slidesPerView: 3,
+    },
   },
   loop: true,
 });

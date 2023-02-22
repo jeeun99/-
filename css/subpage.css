@@ -137,25 +137,45 @@
 .item_dis {
   display: flex;
 }
-
-.dis1 p:nth-of-type(even),
-.jis1 p:nth-of-type(even) {
-  color: var(--color_maintext);
+.dbox_dis,
+.jbox_dis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  padding-bottom: 1rem;
 }
-
+.dbox_dis h4,
+.jbox_dis h4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
 .dbox_dis > img,
 .jbox_dis > img {
-  width: 90%;
+  width: 35%;
+  height: 100%;
   margin: auto;
+  padding-right: 2rem;
 }
 
 .dis1 {
   line-height: 1.5;
   padding-left: 7px;
-  width: 90%;
+  width: 100%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: baseline;
 }
-
+.dis1 p {
+  font-size: 18px;
+}
+.dis1 p:nth-of-type(even) {
+  color: var(--color_maintext);
+  font-size: 0.9rem;
+}
 .dhint1,
 .dhint2,
 .dhint3,
@@ -366,7 +386,8 @@
 }
 .modal {
   background-color: var(--backgroundcolor);
-  width: 80vh;
+  width: 80vw;
+  height: 100%;
   font-size: 20px;
 }
 .modal > * {
@@ -488,6 +509,123 @@
   background-color: var(--point_yellow);
 }
 
+.dhint1:hover .options,
+.dhint2:hover .options,
+.dhint3:hover .options,
+.jhint1:hover .options,
+.jhint2:hover .options,
+.jhint3:hover .options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dhint1 > *,
+.dhint2 > *,
+.dhint3 > *,
+.jhint1 > *,
+.jhint2 > *,
+.jhint3 > * {
+  width: 100%;
+  /* border: 1px solid rgba(0, 0, 0, 0.4); */
+}
+
+.dhint1,
+.dhint2,
+.dhint3,
+.jhint1,
+.jhint2,
+.jhint3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dhint1 > div:nth-of-type(1),
+.dhint2 > div:nth-of-type(1),
+.dhint3 > div:nth-of-type(1),
+.jhint1 > div:nth-of-type(1),
+.jhint2 > div:nth-of-type(1),
+.jhint3 > div:nth-of-type(1) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dhint1 img,
+.dhint2 img,
+.dhint3 img,
+.jhint1 img,
+.jhint2 img,
+.jhint3 img {
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 3rem;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+.hint_discription {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.hint_discription > p {
+  width: 100%;
+}
+
+@media (min-width: 961px) {
+  .thumbnail_con {
+    width: 40%;
+    margin-right: 4rem;
+  }
+  .product_con {
+    width: 35%;
+  }
+  .item_dis {
+    display: block;
+  }
+  .item_dis > * {
+    display: block;
+    margin-bottom: 5rem;
+  }
+  .dis1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dis1 h4 {
+    width: 100%;
+  }
+  .dis1 p {
+    font-size: 18px;
+  }
+  .dis1 p:nth-of-type(odd) {
+    width: 30%;
+  }
+  .dis1 p:nth-of-type(even) {
+    color: var(--color_maintext);
+    font-size: 0.9rem;
+    width: 70%;
+  }
+
+  .dbox > .dbox_dis,
+  .jbox > .jbox_dis {
+    width: 70%;
+  }
+  .jbox_dis h4 {
+    padding-bottom: 2.5rem;
+  }
+  .dbox > .slide2,
+  .jbox > .slide3 {
+    width: 70%;
+  }
+  .deliver > * {
+    width: calc(100% / 2);
+  }
+}
 @media (max-width: 960px) {
   .product {
     display: flex;
@@ -511,11 +649,30 @@
     width: 100%;
     display: block;
   }
+  .dbox_dis,
+  .jbox_dis {
+    display: block;
+  }
+  .dbox_dis > img,
+  .jbox_dis > img {
+    width: 100%;
+  }
   .dbox {
     padding-bottom: 2rem;
   }
   .jbox_dis {
     padding-bottom: 3rem;
+  }
+  .dbox_dis h4,
+  .jbox_dis h4 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .dbox_dis > img,
+  .jbox_dis > img {
+    padding-right: 0;
   }
   .deliver {
     display: flex;
@@ -543,56 +700,80 @@
   .hint_discription {
     margin: 0 4rem;
   }
-  .hint_discription p:nth-of-type(3),
-  .hint_discription p:nth-of-type(4) {
-    width: calc(100% / 2);
-  }
-}
-@media (min-width: 961px) {
-  .thumbnail_con {
-    width: 40%;
-    margin-right: 4rem;
-  }
-  .product_con {
-    width: 35%;
-  }
-  .item_dis > * {
-    width: calc(100% / 2);
-    display: flex;
-  }
-  .deliver > * {
-    width: calc(100% / 2);
-  }
-  .dbox {
-    border-right: 1px solid var(--color_subtext);
-  }
-  .dbox > *,
-  .jbox > * {
-    width: calc(100% / 2);
-  }
-}
-@media (max-width: 400px) {
-  .hint_discription {
-    margin: 0 1rem;
-  }
   .modal {
-    transform: scale(0.6);
+    width: 100%;
+  }
+  .modal label {
+    font-size: 20px;
+  }
+  .modal input,
+  .modal select {
+    font-size: 16px;
   }
   .pay_things {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0;
+  }
+  .pay_things p {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 1rem;
   }
   .paybox {
     width: 100%;
     margin-right: 1rem;
     margin-bottom: 1rem;
   }
-
   .btn_buying {
     position: relative;
     bottom: 0;
     width: 100%;
     margin-left: 1rem;
+  }
+  .btn_buying,
+  .btn_close {
+    font-size: 16px;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+  }
+}
+@media (max-width: 440px) {
+  .hint_discription {
+    margin: 0 1rem;
+  }
+  .buyPage {
+    width: 100%;
+    font-size: 16px;
+    overflow: scroll;
+  }
+  .modal .total_price {
+    display: inline;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+  .paybox > div > label {
+    font-size: 14px;
+  }
+  .modal input {
+    font-size: 12px;
+  }
+  .add_num {
+    position: relative;
+  }
+  .btn_add {
+    display: none;
+  }
+  .btn_prod {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .btn_prod > * {
+    margin-bottom: 0.5rem;
+  }
+  .btn_cart,
+  .btn_purchase {
+    width: 100%;
   }
 }
