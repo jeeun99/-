@@ -1,6 +1,7 @@
 # 술담화 리뉴얼 프로젝트
 
 HTML5, CSS3, JavaScript를 활용한 구독서비스 관련 웹사이트 리뉴얼 프로젝트
+<img src='https://github.com/jeeun99/sooldamhwaProject/blob/master/img/mockup.jpg?raw=true' alt='demo' />
 
 ## 🙋 프로젝트 소개
 
