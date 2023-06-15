@@ -197,6 +197,13 @@ img {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  .subimg {
+    width: 40%;
+  }
+  .subtext {
+    width: 60%;
   }
   .subscribe_sec img {
     width: 100%;
@@ -340,10 +347,7 @@ img {
     align-items: flex-start;
     margin-left: 1rem;
   }
-  .subtext img {
-    width: 305px;
-    border-radius: 1rem;
-  }
+
   .btn_m {
     position: absolute;
     top: 90px;
